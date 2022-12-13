@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid>
+ 
+    <Label Text="Welcome to My APPANSWERS!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+
+    <Grid x:Name="SplashGrid" BackgroundColor="{StaticResource Primary}">
+        <Image x:Name="Logo" Source="Logo" HorizontalOptions="Center" VerticalOptions="Center">
+            <Image.TranslationY>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="Android">-12</On>
+                </OnPlatform>
+            </Image.TranslationY>
+            <Button Margin="0,10,0,0" Text="make a Question"
+                        Command="{Binding OpenWebCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+        </Image>
+    </Grid>
+</Grid>
